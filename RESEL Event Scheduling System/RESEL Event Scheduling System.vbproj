@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C94AF7D1-9861-42A4-89C3-D841ED453511}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RESEL_Event_Scheduling_System.My.MyApplication</StartupObject>
+    <RootNamespace>RESEL_Event_Scheduling_System</RootNamespace>
+    <AssemblyName>RESEL Event Scheduling System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RESEL Event Scheduling System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RESEL Event Scheduling System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconresel.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4663A6B2EB1D789E27EF2109FD871110D2651A24</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RESEL Event Scheduling System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Engine.13.0.3501\lib\net20\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ClientDoc.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonControls.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Prompting.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportSource.13.0.3501\lib\net20\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Shared.13.0.3501\lib\net20\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Windows.Forms.13.0.3501\lib\net20\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\FlashControlV71.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.2.0.9.5\lib\net45\MySqlBackup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Controller\AcademicYearClass.vb" />
+    <Compile Include="Controller\AccountClass.vb" />
+    <Compile Include="Controller\CollegeClass..vb" />
+    <Compile Include="Controller\EventClass.vb" />
+    <Compile Include="Controller\VenueClass.vb" />
+    <Compile Include="Model\ConnectionAdapter.vb" />
+    <Compile Include="Model\MethodCollections.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmCompletedEvents.Designer.vb">
+      <DependentUpon>frmCompletedEvents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmCompletedEvents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEditDetails.Designer.vb">
+      <DependentUpon>frmEditDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEditDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEventReschedulingvb.Designer.vb">
+      <DependentUpon>frmEventReschedulingvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEventReschedulingvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEventScheduling.Designer.vb">
+      <DependentUpon>frmEventScheduling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEventScheduling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEventTrack.Designer.vb">
+      <DependentUpon>frmEventTrack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmEventTrack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmSetSchedule.Designer.vb">
+      <DependentUpon>frmSetSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmSetSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmConnectionSettings.Designer.vb">
+      <DependentUpon>frmConnectionSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmConnectionSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Datasets\account.designer.vb">
+      <DependentUpon>account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Datasets\account.vb">
+      <DependentUpon>account.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Datasets\account1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>account.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Event Report\frmEventReportRecords.Designer.vb">
+      <DependentUpon>frmEventReportRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Event Report\frmEventReportRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\College.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>College.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\deprtmntrpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>deprtmntrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\listAccount.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listAccount.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\listHolidays.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listHolidays.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\listOfEventsrpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listOfEventsrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\Overdue.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Overdue.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\partnerAgency.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>partnerAgency.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\Pndng.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pndng.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\rptAcademicDate.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAcademicDate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\rptAcadmicYear.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAcadmicYear.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\rptUnits.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUnits.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\todaysEve.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>todaysEve.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Document\venue.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>venue.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Viewer\reports.designer.vb">
+      <DependentUpon>reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Reports\Report Viewer\reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicDate Settings\frmAcademicDate.Designer.vb">
+      <DependentUpon>frmAcademicDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicDate Settings\frmAcademicDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicDate Settings\frmManageDateSettingsvb.Designer.vb">
+      <DependentUpon>frmManageDateSettingsvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicDate Settings\frmManageDateSettingsvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicYear\frmSetDateSetttings.Designer.vb">
+      <DependentUpon>frmSetDateSetttings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicYear\frmSetDateSetttings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmaccountsettings.Designer.vb">
+      <DependentUpon>frmaccountsettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmaccountsettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmallactivitylogs.Designer.vb">
+      <DependentUpon>frmallactivitylogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmallactivitylogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Archives\frmArchive.Designer.vb">
+      <DependentUpon>frmArchive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Archives\frmArchive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmManageEvents.Designer.vb">
+      <DependentUpon>frmManageEvents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmManageEvents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmShowRecords.Designer.vb">
+      <DependentUpon>frmShowRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmShowRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmViewdetails.Designer.vb">
+      <DependentUpon>frmViewdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmViewdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmOverdue.Designer.vb">
+      <DependentUpon>frmOverdue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmOverdue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmPendEve.Designer.vb">
+      <DependentUpon>frmPendEve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmPendEve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmTodayEve.Designer.vb">
+      <DependentUpon>frmTodayEve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\frmTodayEve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\ListofEvents.Designer.vb">
+      <DependentUpon>ListofEvents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event Scheduling\ListofEvents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmAddAcademicYear.Designer.vb">
+      <DependentUpon>frmAddAcademicYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmAddAcademicYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmAYActivate.Designer.vb">
+      <DependentUpon>frmAYActivate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmAYActivate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmActivityLogs.Designer.vb">
+      <DependentUpon>frmActivityLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmActivityLogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmaddcollege.Designer.vb">
+      <DependentUpon>frmaddcollege.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmaddcollege.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmadddept.Designer.vb">
+      <DependentUpon>frmadddept.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmadddept.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmpartneragencies.Designer.vb">
+      <DependentUpon>frmpartneragencies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmpartneragencies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmsavevenue.Designer.vb">
+      <DependentUpon>frmsavevenue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Event\frmsavevenue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Holiday\frmHolidayRecords.Designer.vb">
+      <DependentUpon>frmHolidayRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Holiday\frmHolidayRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Holiday\frmManageHoliday.Designer.vb">
+      <DependentUpon>frmManageHoliday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Holiday\frmManageHoliday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Home\frmHome.designer.vb">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Home\frmHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicYear\frmAYRecords.Designer.vb">
+      <DependentUpon>frmAYRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicYear\frmAYRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicYear\frmManageAcademicYear.Designer.vb">
+      <DependentUpon>frmManageAcademicYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\AcademicYear\frmManageAcademicYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmManageAccounts.designer.vb">
+      <DependentUpon>frmManageAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmManageAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmAccountsRecords.designer.vb">
+      <DependentUpon>frmAccountsRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Accounts\frmAccountsRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmLogIn.designer.vb">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Log-In\frmLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmCollegeRecords.Designer.vb">
+      <DependentUpon>frmCollegeRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmCollegeRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmDepartmentRecords.Designer.vb">
+      <DependentUpon>frmDepartmentRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmDepartmentRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmManageCollege.Designer.vb">
+      <DependentUpon>frmManageCollege.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmManageCollege.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmManageDepartment.Designer.vb">
+      <DependentUpon>frmManageDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\College\frmManageDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Partner-Agency\frmManagePartnerAgency.Designer.vb">
+      <DependentUpon>frmManagePartnerAgency.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Partner-Agency\frmManagePartnerAgency.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Partner-Agency\frmPartnerAgencyRecords.Designer.vb">
+      <DependentUpon>frmPartnerAgencyRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Partner-Agency\frmPartnerAgencyRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Units\frmManageUnits.Designer.vb">
+      <DependentUpon>frmManageUnits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Units\frmManageUnits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Units\frmUnitsRecords.Designer.vb">
+      <DependentUpon>frmUnitsRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Units\frmUnitsRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Venue\frmManageVenue.Designer.vb">
+      <DependentUpon>frmManageVenue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Venue\frmManageVenue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Venue\frmVenueRecords.Designer.vb">
+      <DependentUpon>frmVenueRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Settings\Venue\frmVenueRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmCompletedEvents.resx">
+      <DependentUpon>frmCompletedEvents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmEditDetails.resx">
+      <DependentUpon>frmEditDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmEventReschedulingvb.resx">
+      <DependentUpon>frmEventReschedulingvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmEventScheduling.resx">
+      <DependentUpon>frmEventScheduling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmEventTrack.resx">
+      <DependentUpon>frmEventTrack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmSetSchedule.resx">
+      <DependentUpon>frmSetSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Log-In\frmConnectionSettings.resx">
+      <DependentUpon>frmConnectionSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Event Report\frmEventReportRecords.resx">
+      <DependentUpon>frmEventReportRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\College.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>College.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\deprtmntrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>deprtmntrpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\listAccount.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>listAccount.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\listHolidays.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>listHolidays.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\listOfEventsrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>listOfEventsrpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\Overdue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Overdue.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\partnerAgency.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>partnerAgency.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\Pndng.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Pndng.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\rptAcademicDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAcademicDate.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\rptAcadmicYear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAcadmicYear.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\rptUnits.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUnits.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\todaysEve.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>todaysEve.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Document\venue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>venue.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Reports\Report Viewer\reports.resx">
+      <DependentUpon>reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\AcademicDate Settings\frmAcademicDate.resx">
+      <DependentUpon>frmAcademicDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\AcademicDate Settings\frmManageDateSettingsvb.resx">
+      <DependentUpon>frmManageDateSettingsvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\AcademicYear\frmSetDateSetttings.resx">
+      <DependentUpon>frmSetDateSetttings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Accounts\frmaccountsettings.resx">
+      <DependentUpon>frmaccountsettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Accounts\frmallactivitylogs.resx">
+      <DependentUpon>frmallactivitylogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Archives\frmArchive.resx">
+      <DependentUpon>frmArchive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event\frmManageEvents.resx">
+      <DependentUpon>frmManageEvents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event\frmShowRecords.resx">
+      <DependentUpon>frmShowRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmViewdetails.resx">
+      <DependentUpon>frmViewdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmOverdue.resx">
+      <DependentUpon>frmOverdue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmPendEve.resx">
+      <DependentUpon>frmPendEve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\frmTodayEve.resx">
+      <DependentUpon>frmTodayEve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event Scheduling\ListofEvents.resx">
+      <DependentUpon>ListofEvents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Log-In\frmAddAcademicYear.resx">
+      <DependentUpon>frmAddAcademicYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Log-In\frmAYActivate.resx">
+      <DependentUpon>frmAYActivate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Accounts\frmActivityLogs.resx">
+      <DependentUpon>frmActivityLogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event\frmaddcollege.resx">
+      <DependentUpon>frmaddcollege.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event\frmadddept.resx">
+      <DependentUpon>frmadddept.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event\frmpartneragencies.resx">
+      <DependentUpon>frmpartneragencies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Event\frmsavevenue.resx">
+      <DependentUpon>frmsavevenue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Holiday\frmHolidayRecords.resx">
+      <DependentUpon>frmHolidayRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Holiday\frmManageHoliday.resx">
+      <DependentUpon>frmManageHoliday.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Home\frmHome.resx">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\AcademicYear\frmAYRecords.resx">
+      <DependentUpon>frmAYRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\AcademicYear\frmManageAcademicYear.resx">
+      <DependentUpon>frmManageAcademicYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Accounts\frmManageAccounts.resx">
+      <DependentUpon>frmManageAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Accounts\frmAccountsRecords.resx">
+      <DependentUpon>frmAccountsRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Log-In\frmLogIn.resx">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\College\frmCollegeRecords.resx">
+      <DependentUpon>frmCollegeRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\College\frmDepartmentRecords.resx">
+      <DependentUpon>frmDepartmentRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\College\frmManageCollege.resx">
+      <DependentUpon>frmManageCollege.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\College\frmManageDepartment.resx">
+      <DependentUpon>frmManageDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Partner-Agency\frmManagePartnerAgency.resx">
+      <DependentUpon>frmManagePartnerAgency.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Partner-Agency\frmPartnerAgencyRecords.resx">
+      <DependentUpon>frmPartnerAgencyRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Units\frmManageUnits.resx">
+      <DependentUpon>frmManageUnits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Units\frmUnitsRecords.resx">
+      <DependentUpon>frmUnitsRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Venue\frmManageVenue.resx">
+      <DependentUpon>frmManageVenue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Settings\Venue\frmVenueRecords.resx">
+      <DependentUpon>frmVenueRecords.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="RESEL Event Scheduling System_TemporaryKey.pfx" />
+    <None Include="View\Admin\Reports\Datasets\account.xsc">
+      <DependentUpon>account.xsd</DependentUpon>
+    </None>
+    <None Include="View\Admin\Reports\Datasets\account.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>account1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\Admin\Reports\Datasets\account.xss">
+      <DependentUpon>account.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconresel.ico" />
+    <Content Include="calendar_icon.ico" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\wmsu_official_logo.JPG" />
+    <None Include="packages.config" />
+    <None Include="Resources\png\list-1.png" />
+    <None Include="Resources\information-button.png" />
+    <None Include="Resources\information-button1.png" />
+    <None Include="Resources\information-button2.png" />
+    <None Include="Resources\key.png" />
+    <Content Include="Resources\png\calendar-5.png" />
+    <Content Include="Resources\png\folder-10.png" />
+    <Content Include="Resources\png\settings-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
